@@ -3,11 +3,12 @@ import { ProductService } from '../../services/product';
 import { Product } from '../../models/Product';
 import { ProductCard } from '../product-card/product-card';
 import { Observable } from 'rxjs';
+import { CommonModule, AsyncPipe } from '@angular/common';
 
 @Component({
   selector: 'app-products-list',
   standalone: true,
-  imports: [ProductCard],
+  imports: [ProductCard, CommonModule, AsyncPipe],
   templateUrl: './products-list.html',
   styleUrl: './products-list.css',
 })
